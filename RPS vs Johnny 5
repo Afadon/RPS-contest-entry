@@ -1,0 +1,80 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Feb  7 16:22:35 2022
+
+@author: Adam Hocker
+"""
+
+import random
+
+
+print ("+------------------------------+")
+print ("|       Let's play a game!     |")
+print ("|     Rock, Paper, Scissors    |")
+print ("| Johnny 5 is ready for battle |")
+print ("+------------------------------+")
+
+
+RPS = ["rock", "paper", "scissor"]
+
+gamestied = 0
+gamesplayerwon = 0
+gamesaiwon = 0
+G = 1
+
+games = int(input("How many rounds would you like to play?:"))
+while G <= games:
+
+    aich = str(random.choice(RPS))
+
+
+    playerch = input("Enter rock, paper or scissors:")
+    playerch = playerch.lower()
+    print ("You chose:", playerch)
+
+            
+    if playerch == aich:
+            print("Johnny 5 chose:" ,aich)
+            print("Looks like you Tied! Try again!")
+            gamestied += 1
+        
+    elif playerch == "rock":
+        print("Johnny 5 chose:", aich)
+        if aich == "paper":
+            print("Paper covers Rock, Try again!")
+            gamesaiwon += 1
+        else:
+            print("Rock smashes Scissors, You won!")
+            gamesplayerwon += 1
+    
+    elif playerch == "paper":
+        print("Johnny 5 chose:", aich)
+        if aich == "scissors":
+            print("Scissors cuts Paper, Try again!")
+            gamesaiwon += 1
+        else:
+            print("Paper covers Rock, You won!")
+            gamesplayerwon += 1
+    
+    elif playerch == "scissors":
+        print("Johnny 5 chose:", aich)
+        if aich == "rock":
+            print("Rock smashes Scissors, Try again!")
+            gamesaiwon += 1
+        else:
+            print("Scissors cuts Paper, You won!")
+            gamesplayerwon += 1
+    
+    else:
+        print("Human input malfunction detected!")
+
+    print ("+---------------------------------+")
+    print ("|         Score    Board          |")
+    print ("+---------------------------------+")
+    print (f"| User: {gamesplayerwon} | Johnny 5: {gamesaiwon} | Tied: {gamestied} |")
+    print ("+---------------------------------+")
+    print (f"|            Round: {G}             |")
+    print ("+---------------------------------+")
+
+    G += 1
+
