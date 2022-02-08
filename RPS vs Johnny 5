@@ -67,6 +67,7 @@ while G <= games:
     
     else:
         print("Human input malfunction detected!")
+        G -= 1
 
     print ("+---------------------------------+")
     print ("|         Score    Board          |")
