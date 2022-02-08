@@ -62,13 +62,13 @@ while G <= games:
         print("Human input malfunction detected!")
         G -= 1
 
-    print ("+---------------------------------+")
-    print ("|         Score    Board          |")
-    print ("+---------------------------------+")
-    print (f"| User: {gamesplayerwon} | Johnny 5: {gamesaiwon} | Tied: {gamestied} |")
-    print ("+---------------------------------+")
-    print (f"|            Round: {G}             |")
-    print ("+---------------------------------+")
+    print ("+-----------------------------------+")
+    print ("|          Score    Board           |")
+    print ("+-----------------------------------+")
+    print (f"| Player: {gamesplayerwon} | Johnny 5: {gamesaiwon} | Tied: {gamestied} |")
+    print ("+-----------------------------------+")
+    print (f"|             Round: {G}              |")
+    print ("+-----------------------------------+")
 
     G += 1
 
